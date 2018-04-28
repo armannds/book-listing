@@ -1,10 +1,8 @@
 import React from 'react';
 
-const BookListItem = ({ title }) => (
-  <div className="card">
-    <div className="card-content">
-      {title}
-    </div>
+const BookListItem = ({ book, onSelectBook }) => (
+  <div className="card" onClick={() => onSelectBook(book)} role="presentation">
+    <div className="card-content">{book.title}</div>
   </div>
 );
 
