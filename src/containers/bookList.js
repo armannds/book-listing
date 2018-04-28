@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import BookListItem from '../components/bookListItem';
 
 class Booklist extends Component {
   renderList() {
     return this.props.books.map(book => (
-      <li key={book.title} className="list-group-item">
-        {book.title}
+      <li key={book.title}>
+        <BookListItem title={book.title} />
       </li>
     ));
   }
 
   render() {
     return (
-      <ul className="list-group col-sm-4">
+      <ul>
         {this.renderList()}
       </ul>
     );

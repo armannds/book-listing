@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import BookList from './containers/bookList';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <BookList />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="columns">
+    <div className="column is-one-third">
+      <BookList />
+    </div>
+  </div>
+);
 
 export default App;
